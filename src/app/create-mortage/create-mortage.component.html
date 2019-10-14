@@ -1,0 +1,45 @@
+<form [formGroup]="mortageForm" (ngSubmit)="onSubmit()">
+    <ngx-tabset>
+        <ngx-tab tabTitle="Personal">
+            <label>
+                First Name:
+                <input type="text" formControlName="firstName">
+            </label>
+
+            <label>
+                Last Name:
+                <input type="text" formControlName="lastName">
+            </label>
+            <label>
+                Email:
+                <input type="text" formControlName="email">
+            </label>
+
+            <label>
+                Phone Number:
+                <input type="text" formControlName="phone">
+            </label>
+        </ngx-tab>
+        <ngx-tab tabTitle="Employment">
+            <label>
+                EmpType:
+                <input type="radio" value="pvt" formControlName="EmpType"> Private
+                <input type="radio" value="govt" formControlName="EmpType"> Govt
+            </label>
+        </ngx-tab>
+        <ngx-tab tabTitle="Property">
+            <label>
+                Loan Amount:
+                <input type="text" formControlName="loanAmt">
+            </label>
+
+            <label>
+                Deposit Amount:
+                <input type="text" formControlName="deposit">
+            </label>
+        </ngx-tab>
+        <ngx-tab tabTitle="Loan">
+            <input type="submit" value="Submit">
+        </ngx-tab>
+    </ngx-tabset>
+</form>
