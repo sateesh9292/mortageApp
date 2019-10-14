@@ -1,45 +1,58 @@
-<form [formGroup]="mortageForm" (ngSubmit)="onSubmit()">
-    <ngx-tabset>
-        <ngx-tab tabTitle="Personal">
-            <label>
-                First Name:
-                <input type="text" formControlName="firstName">
-            </label>
+<div class="container">
+    <form [formGroup]="mortageForm" (ngSubmit)="onSubmit()" class="form-inline">
+        <ngx-tabset>
+            <ngx-tab tabTitle="Personal">
+                <label><b>First Name</b></label>
+                <input type="text" formControlName="firstName" required>
 
-            <label>
-                Last Name:
-                <input type="text" formControlName="lastName">
-            </label>
-            <label>
-                Email:
-                <input type="text" formControlName="email">
-            </label>
+                <label><b>Last Name</b></label>
+                <input type="text" formControlName="lastName" required>
 
-            <label>
-                Phone Number:
-                <input type="text" formControlName="phone">
-            </label>
-        </ngx-tab>
-        <ngx-tab tabTitle="Employment">
-            <label>
-                EmpType:
-                <input type="radio" value="pvt" formControlName="EmpType"> Private
-                <input type="radio" value="govt" formControlName="EmpType"> Govt
-            </label>
-        </ngx-tab>
-        <ngx-tab tabTitle="Property">
-            <label>
-                Loan Amount:
+                <label><b>Email</b></label>
+                <input type="text" formControlName="email" required>
+
+                <label><b>Phone</b></label>
+                <input type="text" formControlName="phone" required>
+
+                <button type="button" class="registerbtn" (click)="next($event)">Next</button>
+            </ngx-tab>
+            <ngx-tab tabTitle="Employment">
+                <label><b>EmpType</b></label><br>
+                <label><input type="radio" value="pvt" formControlName="EmpType"> Private
+                    <input type="radio" value="govt" formControlName="EmpType"> Govt
+                </label>
+                <br>
+                <label><b>Company</b></label>
+                <input type="text" formControlName="company" required>
+
+                <label><b>Salary</b></label>
+                <input type="text" formControlName="salary" required>
+
+                <button type="button" class="registerbtn">Next</button>
+            </ngx-tab>
+            <ngx-tab tabTitle="Property">
+                <label><b>Type Of Property</b></label>
+                <input type="text" formControlName="tprop">
+
+                <label><b>Property Name</b></label>
+                <input type="text" formControlName="pName">
+
+                <label><b>Property Number</b></label>
+                <input type="text" formControlName="pNumber">
+
+                <label><b>Property Value</b></label>
+                <input type="text" formControlName="pValue">
+
+                <button type="button" class="registerbtn">Next</button>
+            </ngx-tab>
+            <ngx-tab tabTitle="Loan">
+                <label><b>Loan Amount</b></label>
                 <input type="text" formControlName="loanAmt">
-            </label>
 
-            <label>
-                Deposit Amount:
+                <label><b>Deposit Amount</b></label>
                 <input type="text" formControlName="deposit">
-            </label>
-        </ngx-tab>
-        <ngx-tab tabTitle="Loan">
-            <input type="submit" value="Submit">
-        </ngx-tab>
-    </ngx-tabset>
-</form>
+                <button type="submit" class="registerbtn">Submit</button>
+            </ngx-tab>
+        </ngx-tabset>
+    </form>
+</div>

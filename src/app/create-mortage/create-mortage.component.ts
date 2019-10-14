@@ -14,12 +14,23 @@ export class CreateMortageComponent implements OnInit {
   mortageForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
+    email: new FormControl(''),
+    phone: new FormControl(''),
     EmpType: new FormControl(''),
     deposit: new FormControl(''),
-    loanAmt: new FormControl('')
+    loanAmt: new FormControl(''),
+    company: new FormControl(''),
+    salary: new FormControl(''),
+    tprop: new FormControl(''),
+    pName: new FormControl(''),
+    pNumber: new FormControl(''),
+    pValue: new FormControl(''),
   });
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.warn(this.mortageForm.value);
+  }
+  next(event) {
+    console.log(event);
   }
 }

@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { TabsModule } from 'ngx-tabset';
 import { CreateMortageComponent } from './create-mortage/create-mortage.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateMortageComponent
+    CreateMortageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
